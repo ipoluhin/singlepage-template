@@ -1,0 +1,475 @@
+///import css-variables from 
+@import 'vars'
+
+@font-face {
+	font-family: 'montserrat'
+	src: url('../fonts/montserrat/regular/montserrat-regular.eot')
+	src: url('../fonts/montserrat/regular/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/regular/montserrat-regular.woff2') format('woff2'),
+         url('../fonts/montserrat/regular/montserrat-regular.woff') format('woff')
+	font-weight: normal
+	font-style: normal
+}
+
+@font-face {
+	font-family: montserrat
+	src: url('../fonts/montserrat/montserrat-mediumitalic.ttf')
+	font-weight: 500
+	font-style: italic
+}
+
+@font-face {
+	font-family: montserrat
+	src: url('../fonts/montserrat/montserrat-bold.ttf')
+	font-weight: 700
+	font-style: normal
+}
+
+
+body
+	width: $width
+	margin: 0 auto
+	font-family: arial
+	background-color: #fff
+
+.header
+	background-color: #445162
+	display: flex
+	padding: 50px
+	justify-content: space-between
+	&-left-part
+		//outline: 1px solid black
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.product-name
+			font-size: 60px
+			line-height: 1.2
+			font-weight: 400
+			color: rgb(255, 255, 255)
+			margin: 0 0 50px 0
+		.products-description
+			margin: 0
+			padding: 0 0 0 36px
+			width: 458px
+			font-size: 20px
+			line-height: 36px
+			font-weight: 400
+			color: #fff
+			list-style-type: none
+			&-item
+				padding: 0
+				position: relative
+			&-item::before
+				//outline: 1px solid black
+				content: ""
+				display: block
+				width: 25px
+				height: 19px
+				position: absolute
+				top: 9px
+				left: -30px
+				background-image: url('../img/check_white.png')
+				background-size: cover
+	img
+		//outline: 1px solid black
+		display: block
+		background-color: #fff
+		min-height: 214px
+		width: 469px
+		font-size: 0
+.main
+	.about-product
+		//outline: 1px solid black
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		.section-part-left
+			width: 653px
+			font-size: 16px
+			line-height: 24px
+			font-weight: 400
+			color: #333
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			.section-header
+				font-size: 30px
+				line-height: 36px
+				font-weight: 400
+				color: #445161		
+			p
+				margin: 20px 0 0 0
+		.video-about-product
+			display: block
+			min-height: 245px
+				//outline: 1px solid black
+			background-color: #445161
+	.product-details
+		//outline: 1px solid black
+		background-color: #f5f5f5
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		align-items: center
+		.details-header
+			width: 100%
+			text-align: center
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+			margin: 0 0 30px 0
+		.details-block
+			display: flex
+			justify-content: space-between
+			.details-list
+				margin: 0
+				list-style-type: none
+				display: flex
+				justify-content: space-between
+				flex-direction: column
+				.details-item
+					padding: 0 0 0 25px
+					margin: 35px 0 0 0
+					font-size: 16px
+					line-height: 24px
+					font-weight: 400
+					color: #333333
+					position: relative
+					&::before
+						content: "+"
+						display: block
+						width: 32px
+						height: 32px
+						background-color: #445161
+						position: absolute
+						color: #fff
+						text-align: center
+						line-height: 32px
+						font-size: 28px
+						top: 5px
+						left: -16px
+						background-size: cover				
+				.details-item:first-child
+					margin: 0
+	.screenshots
+		padding: 50px
+		background-color: #fff
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		//outline: 1px solid
+		&-header
+			width: 100%
+			text-align: center
+			display: block
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+			margin: 0 0 35px 0
+		&-figures
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			flex-wrap: wrap
+			.screenshots-figure
+				margin: 0						
+				display: flex
+				justify-content: space-between
+				width: 48%
+				&-img
+					min-width: 200px
+					min-height: 150px
+					background-color: #445161
+					font-size: 0
+					margin: 0 15px 0 0
+				&-block
+					display: flex
+					justify-content: space-between
+					flex-direction: column
+					margin: 0
+					&-header
+						font-size: 24px
+						line-height: 30px
+						font-weight: 400
+						color: #445161
+					.screenshots-figcaption-text
+						font-size: 16px
+						line-height: 24px
+						font-weight: 400
+						color: #333333
+	.reviews
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		background-color: #f5f5f5
+		align-items: flex-start
+		margin: 0
+		flex-wrap: wrap
+		//outline: 1px solid  
+		&-header
+			display: block
+			min-width: 100%
+			text-align: center
+			margin: 0 0 51px 0
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+		&-figure
+			display: flex
+			justify-content: space-between
+			max-width: 48%
+			min-height: 121px
+			margin: 0 16px 0 0
+			padding: 0 0 24px 0
+			&-img
+				min-width: 75px
+				border-radius: 50%
+				background-color: #445161
+				font-size: 0
+				margin: 0 22px 0 0
+			.reviews-figcaption-text
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				background-color: #ebebeb
+				border-radius: 8px
+				padding: 16px
+				position: relative
+				font-size: 14px
+				line-height: 18px
+				font-weight: 400
+				font-style: italic
+				color: #333333
+				margin: 0
+				&:before 
+					content: ""
+					display: block
+					border: 14px solid transparent
+					border-right: 14px solid #ebebeb
+					position: absolute
+					top: 20px
+					left: -27px						
+				.reviews-figcaption-text-autor
+					font-size: 14px
+					line-height: 18px
+					font-weight: 400
+					color: #989898
+					margin: 0
+	.buy-it-now
+		min-height: 656px
+		padding: 50px
+		display: flex
+		justify-content: space-between
+		background-color: #fff
+		flex-direction: column
+		//outline: 1px solid
+		.buy-it-now-header
+			display: block
+			width: 100%
+			text-align: center
+			font-size: 30px
+			line-height: 36px
+			font-weight: 400
+			color: #445161
+			margin: 0 0 40px 0
+		.buy-it-now-tarifs
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			padding: 0 95px 0 95px
+			.tarif
+				display: flex
+				flex-direction: column
+				background-color: #445162
+				box-sizing: border-box
+				border-radius: 8px
+				//width: 300px
+				//height: 334px
+				padding: 0 20px 0 20px
+				&-header
+					font-size: 24px
+					line-height: 30px
+					font-weight: 400
+					color: #ffffff
+					text-align: center
+					padding: 16px 0 16px 0
+				&-price
+					margin: 0 0 0 -20px
+					width: 100%
+					background-color: #fff
+					box-sizing: border-box
+					border: 2.0px solid #445162
+					text-align: center
+					padding: 18px
+					font-size: 40px
+					line-height: 30px
+					font-weight: 400
+					color: #445162
+				&-description
+					padding: 20px 0 20px 0
+					margin: 0 0 0 20px
+					font-size: 14px
+					line-height: 24px
+					font-weight: 400
+					color: #ffffff
+				.button-buy
+					text-decoration: none
+					display: block
+					width: 100%
+					background-color: #ffffff
+					text-align: center
+					margin: 0 0 20px 0
+					padding: 13px
+					box-sizing: border-box
+					border-radius: 8px
+					//outline: none
+					&:hover
+						background-color: #cccccc
+					&-text
+						font-size: 18px
+						line-height: 18px
+						font-weight: 700
+						color: #445161
+						text-transform: uppercase
+			.tarif-standart
+				min-height: 334px
+			.tarif-premium
+				min-height: 432px
+				margin: 0 20px 0 20px
+			.tarif-lux
+				min-height: 526px
+.footer
+	max-width: 100%
+	background-color: #445162
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 50px 246px 50px 246px
+	.contacts-header
+		margin: 0 0 31px 0
+		font-size: 30px
+		line-height: 36px
+		font-weight: 400
+		color: #ffffff		
+		text-align: center
+	.footer__contacts
+		display: flex
+		min-width: 100%
+		justify-content: space-between
+		.footer__form
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 500px
+			margin: 0 10px 0 0
+			input[type="text"],		
+			input[type="email"],
+			.comment
+				width: 100%
+				height: 40px
+				margin: 0 0 20px 0
+				padding: 10px
+				box-sizing: border-box
+				border: 1px solid gray
+				border-radius: 5px
+				background-color: #ffffff
+				outline: none
+				text-transform: capitalize
+				font-size: 16px
+				line-height: 24px
+				font-weight: 400
+				color: #445162
+			.comment
+				width: 500px
+				height: 170px
+			.form__submit-button
+				width: 140px
+				height: 40px
+				background-color: #ffffff
+				box-sizing: border-box
+				border-radius: 5px 
+				outline: none
+				text-align: center
+				text-transform: uppercase
+				&:hover
+					background-color: #cccccc
+		.social
+			min-width: 240px
+			//outline: 1px solid
+			display: flex
+			flex-direction: column			
+			.social-list
+				font-size: 16px
+				line-height: 24px
+				font-weight: 400
+				color: #ffffff
+				list-style-type: none
+				min-width: 100%
+				margin: 0 0 37px 0
+				.social-link
+					font-size: 16px
+					line-height: 24px
+					font-weight: 400
+					position: relative
+					margin: 0 0 29px 0
+					&::before
+						content: ""
+						display: block
+						left: -32px
+						top: 0
+						position: absolute
+						color: #ffffff
+					&:nth-child(1)::before
+						content: url("../img/icon/skype.png")						
+						width: 24px
+					&:nth-child(2)::before
+						content: url("../img/icon/icq.png")						
+						width: 26px
+					&:nth-child(3)::before
+						content: url("../img/icon/email.png")						
+						width: 22px
+					&:nth-child(4)::before
+						content: url("../img/icon/phone.png")						
+						width: 24px
+				.social-link:last-child
+					margin: 0		
+			.social-icon-list
+				min-width: 100%
+				display: flex
+				list-style-type: none
+				.social-net-link
+					display: block
+					width: 42px
+					height: 42px					
+					background-color: #fff
+					background-size: cover
+					border-radius: 50%
+					text-align: center
+					margin: 0 10px 0 0
+					&::last-child
+						margin: 0
+					.fab
+						margin: 10px
+						font-size: 24px
+						line-height: 24px
+						font-weight: 400
+						color: #445162
+.copyright
+	width: 100%
+	min-height: 26px
+	background-color: #f5f5f5
+	text-align: center
+	font-size: 12px
+	line-height: 24px
+	font-weight: 400
+	letter-spacing: 0.025em
+	color: #445162
+.clear-block  //   Временный разделитель
+	display: block
+	width: 100%
+	height: 40px
